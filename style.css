@@ -1,72 +1,95 @@
-body{
-    background-color: bisque;
+*{
+   margin: 0%; 
+   /* background-color: black; */
+   padding: 0%;
 }
-.container{
-    height: 90px;
-    /* width: 1000px; */
-    border: 1px solid rosybrown;
-    margin: 0px;
-    background-color: purple;
-}
-.box1{
-    color: white;
-}
-.class{
-    height: 50px;
-    width: 400px;
-    color: white;
-    border:  solid black;
-    margin: 3px;
-    padding: 1px;
-    background-color: blue;
-    line-break: normal;
-    margin-bottom: 25px;
-    position: relative;
-}
-.box2{
-    /* text-align: center; */
-    margin-top: 5px;
-    margin-bottom: 10px;
-    margin-left: 411px;
-    margin-right: 75px;
-    padding-left: 25px;
-    padding-right: 45px;
-    padding-top: 0px;
-
-
-}
-.box3{
-    height: 500px;
-    width: 360px;
-    border: 2px solid;
-    background-color: blue;
+.gridcontainer{
+    width: 100%;
+    height: 100vh;
+    background-color:black;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-gap:2px;
+    margin: auto;
     text-align: center;
-    margin-top: -375px;
-    margin-bottom: 50px;
-    margin-left: 1136px;
-    margin-right: 50px;
-    color: white;
-    line-break: 2px;
-    padding: auto;
-}
-.box4{
-    height: 50px;
-    width: 4500px;
-    margin-bottom: 0px;
-    border: 1px solid;
-    background-color: blue;
-    align-items: center;
     padding: 25px;
-    padding-left: 250px;
+
+    
+}
+.grid{
+    height: 200px;
+    width: 200px;
+    background-color: antiquewhite;
     color: white;
-    line-height: 25px;
-    padding-right: 50px;
-    padding-left: 450px;
+    text-align: center;
+    padding: auto;
+    margin:80px;
+    transition: all 2s ease-in-out;
+
+}
+#box1:hover{
+    background-color:green;
+    transform: rotate(-45deg);
+
+}
+#box2:hover{
+    background-color:green;
+    transform: rotate(360deg);
+
+}
+#box3:hover{
+    background-color:green;
+    transform: rotate(-360deg);
+}
+#box4:hover{
+    background-color: green;
+    transform:rotatey(90deg);
+
+}
+#box6:hover{
+    background-color: green;
+    transform:rotateX(90deg);
+}
+#box7:hover{
+    background-color:green ;
+    transform-style: flat;
+}
+#box8:hover{
+    background-color: darkgreen;
+    box-shadow: inset 5px 5px 5px 5px;
+}
+#box9:hover{
+    background-color: green;
+    box-shadow: 25px 25px 25px 25px;
+}
+@media  screen and (min-width:340px) and (max-width:840px)
+{
+.grid{
+    background-color:red;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
 }
 
-@media screen and(min-width:600px) and (max-width:800px)
-body{
+    
+}
+@media screen and (min-width:850px) and (max-width:1150px)
 {
-    text-align:center;
+    .grid{
+        background-color:red;
+        display:flex;
+        flex-direction:row;
+        flex-wrap:wrap;
+        justify-content: center;
+    }
 }
-}
+
+
+
+
+    
+    
+
